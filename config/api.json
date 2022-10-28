@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "token": "123",
+  "public": {},
+  "requests": {
+    "api_post_image": "http://127.0.0.1:8000/api/user/image",
+    "api_get_user": "http://127.0.0.1:8000/api/user/{number}/{session}",
+    "api_create_user": "http://127.0.0.1:8000/api/user",
+    "api_contact": "http://127.0.0.1:8000/contact",
+    "api_conversations": "http://127.0.0.1:8000/api/conversations",
+    "api_user_response": "http://127.0.0.1:8000/api/conversations/response",
+    "headers": {
+      "Authorization": "-6$EokOjdvVg/0.J,mdhG{I>Y3>9~o"
+    }
+  },
+  "dynamicWpp": {},
+  "wpp_api_send_text": "whatsapp/send/text",
+  "wpp_api_send_buttons": "whatsapp/send/buttonsreply",
+  "wpp_api_send_list": "whatsapp/send/list",
+  "wpp_api_profilepic": "whatsapp/profilepic"
+}

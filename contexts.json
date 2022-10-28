@@ -1,0 +1,489 @@
+{
+  "contexts": {
+    "1": {
+      "text": "",
+      "params": [
+        "pushName"
+      ],
+      "isBoolean": 1,
+      "isChoice": 0,
+      "isInputText": 0,
+      "choices": 0,
+      "positiveContext": 3,
+      "negativeContext": 9
+    },
+    "2": {
+      "text": "",
+      "params": [
+        "name",
+        "adminName"
+      ],
+      "isBoolean": 0,
+      "isChoice": 1,
+      "isInputText": 0,
+      "choices": 1,
+      "positiveContext": 0,
+      "negativeContext": 0,
+      "plugin": true
+    },
+    "3": {
+      "text": null,
+      "isBoolean": 0,
+      "isChoice": 0,
+      "isInputText": 1,
+      "choices": 0,
+      "positiveContext": 0,
+      "negativeContext": 0,
+      "isCheck": false,
+      "params": [
+        "name",
+        "number",
+        "session"
+      ],
+      "request": {
+        "method": "POST",
+        "params": [
+          "api_create_user",
+          "number",
+          "name",
+          "session"
+        ],
+        "url": "{api_create_user}",
+        "data": {
+          "name": "{name}",
+          "phone": "{number}",
+          "session": "{session}"
+        },
+        "isCheck": false,
+        "ready": "",
+        "cleaned": "",
+        "success": null,
+        "error": "",
+        "navs": {
+          "Confirmar": {
+            "type": "3"
+          },
+          "Alterar": {
+            "type": "4"
+          }
+        },
+        "response": {
+          "isArray": false,
+          "show": false,
+          "changeContext": true,
+          "context": 4,
+          "params": [
+            "msg"
+          ]
+        }
+      },
+      "args": {
+        "1": {
+          "empty": "",
+          "filled": "",
+          "confirmed": "",
+          "canceled": "",
+          "invalid": "",
+          "param_data": "name",
+          "navs": {
+            "Confirmar": "5",
+            "Cancelar": "4"
+          },
+          "type": "text",
+          "required": true,
+          "noConfirm": true,
+          "minLen": 3,
+          "maxLen": 50
+        }
+      },
+      "navigation": {
+        "1": {
+          "5": {
+            "type": 1,
+            "context": 4
+          },
+          "4": {
+            "type": 2,
+            "context": 3
+          }
+        }
+      }
+    },
+    "4": {
+      "text": "",
+      "params": [
+        "name"
+      ],
+      "isBoolean": 0,
+      "isChoice": 1,
+      "isInputText": 0,
+      "choices": 1,
+      "positiveContext": 0,
+      "negativeContext": 0,
+      "plugin": true
+    },
+    "5": {
+      "text": null,
+      "back": "7",
+      "isBoolean": 0,
+      "isChoice": 0,
+      "isInputText": 1,
+      "choices": 0,
+      "positiveContext": 0,
+      "negativeContext": 0,
+      "isCheck": false,
+      "params": [
+        "number",
+        "name",
+        "session"
+      ],
+      "reset": [
+      ],
+      "request": {
+        "method": "POST",
+        "params": [
+          "number",
+          "session"
+        ],
+        "url": "{api}",
+        "data": {
+          "phone": "{number}",
+          "session": "{session}"
+        },
+        "isCheck": false,
+        "ready": "",
+        "cleaned": "",
+        "success": null,
+        "error": "",
+        "navs": {
+          "Enviar": {
+            "type": "3"
+          },
+          "Cancelar": {
+            "type": "2"
+          }
+        },
+        "response": {
+          "clear_params": true,
+          "isArray": false,
+          "show": false,
+          "changeContext": true,
+          "context": 6,
+          "params": [
+            "msg"
+          ]
+        }
+      },
+      "args": {
+        "1": {
+          "empty": "",
+          "filled": "",
+          "confirmed": "",
+          "canceled": "",
+          "invalid": "",
+          "param_data": "",
+          "navs": {
+            "Enviar": "5",
+            "Cancelar": "91"
+          },
+          "type": "text",
+          "required": true,
+          "noConfirm": true,
+          "minLen": 8,
+          "maxLen": 5000
+        }
+      },
+      "navigation": {
+        "1": {
+          "5": {
+            "type": 1,
+            "context": 4
+          },
+          "91": {
+            "type": 2,
+            "context": 4
+          }
+        }
+      }
+    },
+    "6": {
+      "text": "",
+      "params": [
+        "name"
+      ],
+      "isBoolean": 1,
+      "isChoice": 0,
+      "isInputText": 0,
+      "choices": 0,
+      "positiveContext": 7,
+      "negativeContext": 8
+    },
+    "7": {
+      "text": "",
+      "params": [
+        "name"
+      ],
+      "isBoolean": 0,
+      "isChoice": 1,
+      "isInputText": 0,
+      "choices": 1,
+      "positiveContext": 0,
+      "negativeContext": 0,
+      "plugin": true
+    },
+    "8": {
+      "text": "",
+      "params": [
+        "name"
+      ],
+      "isBoolean": 0,
+      "isChoice": 0,
+      "isInputText": 1,
+      "choices": 0,
+      "positiveContext": 7,
+      "negativeContext": 7
+    },
+    "9": {
+      "text": "",
+      "params": [
+        "name"
+      ],
+      "isBoolean": 0,
+      "isChoice": 0,
+      "isInputText": 1,
+      "choices": 0,
+      "positiveContext": 1,
+      "negativeContext": 1
+    },
+    "10": {
+      "modBeta": true,
+      "back": "7",
+      "text": null,
+      "isBoolean": 0,
+      "isChoice": 0,
+      "isInputText": 1,
+      "choices": 0,
+      "positiveContext": 0,
+      "negativeContext": 0,
+      "isCheck": false,
+      "params": [
+        "session"
+      ],
+      "request": {
+        "method": "POST",
+        "params": [
+          "number",
+          "session"
+        ],
+        "url": "{api}",
+        "data": {
+          "phone": "{number}",
+          "session": "{session}"
+        },
+        "isCheck": false,
+        "ready": "",
+        "cleaned": "",
+        "success": null,
+        "error": "",
+        "navs": {
+          "GERAR": {
+            "type": "1"
+          },
+          "Cancelar": {
+            "type": "2"
+          }
+        },
+        "response": {
+          "clear_params": true,
+          "isArray": false,
+          "show": false,
+          "changeContext": true,
+          "context": 11,
+          "params": [
+            "valor"
+          ]
+        }
+      },
+      "lists": {
+        "1": {
+          "name": "",
+          "label": "",
+          "fill": "",
+          "required": true,
+          "requirements": {}
+        }
+      },
+      "args": {
+        "1": {
+          "request": {
+            "method": "GET",
+            "params": [
+              "valor"
+            ],
+            "isLocal": true,
+            "url": null,
+            "data": {},
+            "ready": null,
+            "cleaned": null,
+            "success": null,
+            "error": "",
+            "navs": {
+              "GERAR": "92",
+              "Cancelar": "91"
+            },
+            "defaults_params": {
+              "page": 1
+            },
+            "response": {
+              "isArray": true,
+              "show": true,
+              "changeContext": false,
+              "context": 6,
+              "params": [
+                "valor"
+              ]
+            }
+          },
+          "empty": "",
+          "filled": "",
+          "confirmed": "",
+          "canceled": "",
+          "invalid": null,
+          "param_data": "valor",
+          "navs": {
+            "GERAR": "92",
+            "Cancelar": "91"
+          },
+          "type": "text",
+          "filter": {
+            "type": "number",
+            "range": {
+              "min": 1,
+              "max": 1000
+            }
+          },
+          "required": true,
+          "minLen": 1,
+          "maxLen": 4
+        }
+      },
+      "sender": {
+        "fast": true,
+        "method": "POST",
+        "params": [
+          "number",
+          "valor",
+          "session"
+        ],
+        "url": "{}",
+        "data": {
+          "value": "{valor}",
+          "session": "{session}"
+        },
+        "ready": "",
+        "cleaned": "",
+        "success": null,
+        "error": "",
+        "param_data": "",
+        "navs": {},
+        "response": {
+          "isArray": false,
+          "show": false,
+          "changeContext": true,
+          "context": 11,
+          "params": [
+            "msg"
+          ]
+        }
+      },
+      "navigation": {
+        "1": {
+          "92": {
+            "type": 1,
+            "context": 6
+          },
+          "91": {
+            "type": 2,
+            "context": 4
+          }
+        }
+      }
+    },
+    "11": {
+      "text": "",
+      "params": [
+        ""
+      ],
+      "multi_messages": [
+        "{}"
+      ],
+      "isBoolean": 0,
+      "isChoice": 0,
+      "isInputText": 1,
+      "choices": 0,
+      "positiveContext": 7,
+      "negativeContext": 7
+    },
+    "12": {
+      "text": "",
+      "params": [
+        "id",
+        "api_contact"
+      ],
+      "isBoolean": 0,
+      "isChoice": 0,
+      "isInputText": 1,
+      "choices": 0,
+      "positiveContext": 7,
+      "negativeContext": 7
+    }
+  },
+  "logic": {
+    "sim": 1,
+    "não": 0
+  },
+  "buttons": {
+    "more": "Ver mais...",
+    "back": "Voltar",
+    "menu": "Menu",
+    "sender": "Solicitar pedido",
+    "restart": "Reiniciar Fluxo"
+  },
+  "types": {
+    "1": "confirm",
+    "2": "cancel",
+    "3": "send",
+    "4": "clear",
+    "5": "restart",
+    "6": "exit"
+  },
+  "navigation": {
+    "2": "voltar",
+    "3": "enviar",
+    "4": "alterar",
+    "5": "continuar",
+    "6": "reiniciar"
+  },
+  "choices": {
+    "1": {
+      "1": {
+        "name": "",
+        "context": 5
+      },
+      "2": {
+        "name": "",
+        "context": 10
+      },
+      "3": {
+        "name": "",
+        "context": 12
+      }
+    }
+  },
+  "api": {
+    "example": "http://example.com/create_use?token=123",
+    "dictory": {
+      "token": "123"
+    }
+  }
+}
